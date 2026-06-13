@@ -3,11 +3,18 @@
 [ext_resource type="Script" uid="uid://82ubomvf5dm7" path="res://scripts/map.gd" id="1_paxxb"]
 [ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="2_gldc4"]
 
-[node name="map" type="Node2D" unique_id=1380218791]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paxxb"]
+size = Vector2(1200, 133)
+
+[node name="map" type="CharacterBody2D" unique_id=505401130]
 script = ExtResource("1_paxxb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1998187786]
 self_modulate = Color(0.34457007, 0.6261677, 1, 1)
-position = Vector2(565, 600)
+position = Vector2(0, 1)
 scale = Vector2(9.6171875, 1)
 texture = ExtResource("2_gldc4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=125788091]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_paxxb")

@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://dmj8dbgokkvvq"]
 
 [ext_resource type="Script" uid="uid://lpcbwugq6ltx" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dfu4bang8gsxo" path="res://scenes/map.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cbe6isn1ju8eb" path="res://scenes/pause_menu.tscn" id="3_jyhfs"]
 
 [node name="main" type="Node2D" unique_id=2079591282]
 script = ExtResource("1_o5qli")
+
+[node name="map" parent="." unique_id=1380218791 instance=ExtResource("2_sugp2")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1960012165]
+position = Vector2(577, 326)
+
+[node name="Pause Menu" parent="Camera2D" unique_id=1283381345 instance=ExtResource("3_jyhfs")]
+visible = false
