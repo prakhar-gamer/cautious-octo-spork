@@ -8,6 +8,10 @@
 script = ExtResource("1_o5qli")
 
 [node name="map" parent="." unique_id=1380218791 instance=ExtResource("2_sugp2")]
+position = Vector2(585, 448)
+scroll_impulse = 5000.0
+friction = 0.6
+max_speed = 900
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1960012165]
 position = Vector2(577, 326)
