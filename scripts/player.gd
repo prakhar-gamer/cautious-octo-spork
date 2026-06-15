@@ -6,6 +6,10 @@ extends CharacterBody2D
 @export var Max_fall_speed = 20
 const JUMP_VELOCITY = -400.0
 
+var health = 100
+
+func _ready() -> void:
+	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var pause_menu = $"Camera2D/Pause Menu"
+@onready var pause_menu = $"Player/Camera2D/Pause Menu"
 var paused = false
 
 # Called when the node enters the scene tree for the first time.

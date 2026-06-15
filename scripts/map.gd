@@ -15,9 +15,9 @@ func _physics_process(delta: float) -> void:
 	if x_direction:
 		velocity.y = 0
 		if Input.is_action_just_pressed("scroll_up"):
-			velocity.x += scroll_impulse
-		elif Input.is_action_just_pressed("scroll_down"):
 			velocity.x -= scroll_impulse
+		elif Input.is_action_just_pressed("scroll_down"):
+			velocity.x += scroll_impulse
 		
 		#(from, to, weight)
 		velocity.x = lerp(velocity.x, 0.0, friction * delta)
