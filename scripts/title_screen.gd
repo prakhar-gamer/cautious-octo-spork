@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var damage = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,9 +11,11 @@ func _process(delta: float) -> void:
 	pass
 
 
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+	pass # Replace with function body.
 
-func _on_area_2d_body_shape_entered(_body_rid: RID, body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
-	if body.is_in_group("player"):
-		body.health -= 10
-		print(body.health)
+
+func _on_play_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	pass # Replace with function body.

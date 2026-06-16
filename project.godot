@@ -15,6 +15,10 @@ run/main_scene="uid://dmj8dbgokkvvq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventManager="*uid://c2231xih3o4j5"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dhsncqpjw3u4l"]
+
+[ext_resource type="Script" uid="uid://ja1xw2kuvef1" path="res://scripts/health_bar.gd" id="1_y3kqx"]
+[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="2_6opq1"]
+
+[node name="Health Bar" type="Control" unique_id=1402099306]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3kqx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=736109163]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="heart1" type="TextureRect" parent="HBoxContainer" unique_id=981041830]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_6opq1")
+expand_mode = 2
+
+[node name="heart2" type="TextureRect" parent="HBoxContainer" unique_id=1416380725]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_6opq1")
+expand_mode = 2
+
+[node name="heart3" type="TextureRect" parent="HBoxContainer" unique_id=2085051765]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_6opq1")
+expand_mode = 2
+
+[node name="heart4" type="TextureRect" parent="HBoxContainer" unique_id=1614569742]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_6opq1")
+expand_mode = 2
+
+[node name="heart5" type="TextureRect" parent="HBoxContainer" unique_id=328398785]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_6opq1")
+expand_mode = 2

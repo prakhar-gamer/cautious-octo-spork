@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cbe6isn1ju8eb" path="res://scenes/pause_menu.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://difrl43ithf5n" path="res://scenes/player.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dhi68jw402ui0" path="res://scenes/lava.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dhsncqpjw3u4l" path="res://scenes/health_bar.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://blufdtu7q5cnt" path="res://scenes/settings.tscn" id="7_o6xl0"]
 
 [node name="templevel" type="Node2D" unique_id=2079591282]
 process_mode = 3
@@ -30,4 +32,14 @@ SPEED = 1200.0
 position = Vector2(1, 8)
 
 [node name="Pause Menu" parent="Player/Camera2D" unique_id=1283381345 instance=ExtResource("3_jyhfs")]
+process_mode = 3
 visible = false
+
+[node name="Health Bar" parent="Player/Camera2D" unique_id=1402099306 instance=ExtResource("6_tefeu")]
+offset_left = -563.0
+offset_top = -309.0
+offset_right = -563.0
+offset_bottom = -309.0
+
+[node name="Settings" parent="Player/Camera2D" unique_id=843247705 instance=ExtResource("7_o6xl0")]
+process_mode = 3

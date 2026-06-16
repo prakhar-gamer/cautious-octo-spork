@@ -9,6 +9,7 @@ var x_direction = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	EventManager.updateScrollImpulse.connect(updateImpulse)
 	pass # Replace with function body.
 
 func _physics_process(delta: float) -> void:
@@ -49,6 +50,9 @@ func _process(_delta: float) -> void:
 		x_direction = not x_direction
 
 
+func updateImpulse(new_impulse: float) -> void:
+	scroll_impulse = new_impulse
+	
 
 #func _input(event): 
 	#var movement = $Sprite2D.position
