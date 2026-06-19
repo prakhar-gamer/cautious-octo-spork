@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cnsux22ix2jvk" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://cbe6isn1ju8eb" path="res://scenes/pause_menu.tscn" id="3_tuyoq"]
+[ext_resource type="PackedScene" uid="uid://dhsncqpjw3u4l" path="res://scenes/health_bar.tscn" id="4_fjrip"]
+[ext_resource type="PackedScene" uid="uid://blufdtu7q5cnt" path="res://scenes/settings.tscn" id="5_smehm"]
+[ext_resource type="PackedScene" uid="uid://cpb1rqseiuk0l" path="res://scenes/death_screen.tscn" id="6_ur7pv"]
+[ext_resource type="PackedScene" uid="uid://nq27o07ipufd" path="res://scenes/won.tscn" id="7_fjrip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(46, 47)
@@ -10,6 +15,7 @@ size = Vector2(46, 47)
 size = Vector2(36, 37)
 
 [node name="Player" type="CharacterBody2D" unique_id=1604881120]
+up_direction = Vector2(0.074939, -0.99718815)
 script = ExtResource("1_g2els")
 Max_fall_speed = 100
 
@@ -29,3 +35,30 @@ texture = ExtResource("2_qhqgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=593173302]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2145034602]
+position = Vector2(0, -2)
+
+[node name="Pause Menu" parent="Camera2D" unique_id=1283381345 instance=ExtResource("3_tuyoq")]
+process_mode = 3
+visible = false
+
+[node name="Health Bar" parent="Camera2D" unique_id=1402099306 instance=ExtResource("4_fjrip")]
+process_mode = 3
+offset_left = -239.0
+offset_top = -135.0
+offset_right = -239.0
+offset_bottom = -135.0
+
+[node name="Settings" parent="Camera2D" unique_id=843247705 instance=ExtResource("5_smehm")]
+process_mode = 3
+visible = false
+
+[node name="won" parent="Camera2D" unique_id=549619644 instance=ExtResource("7_fjrip")]
+offset_left = -242.0
+offset_top = -135.0
+offset_right = 248.0
+offset_bottom = 138.0
+
+[node name="Death Screen" parent="Camera2D" unique_id=257485486 instance=ExtResource("6_ur7pv")]
+visible = false

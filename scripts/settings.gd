@@ -2,6 +2,7 @@ extends Control
 
 var open = false
 @onready var ScrollImpulseSlider = $MarginContainer/VBoxContainer/HSlider
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	EventManager.openSettings.connect(openSettings)

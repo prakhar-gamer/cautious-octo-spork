@@ -1,42 +1,36 @@
 [gd_scene format=3 uid="uid://dfu4bang8gsxo"]
 
 [ext_resource type="Script" uid="uid://82ubomvf5dm7" path="res://scripts/map.gd" id="1_paxxb"]
-[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="2_gldc4"]
+[ext_resource type="Texture2D" uid="uid://fsq51i7ptkve" path="res://assets/Level1/Level1map.png" id="2_paxxb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_paxxb"]
-size = Vector2(1203, 121.5)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gldc4"]
+atlas = ExtResource("2_paxxb")
+region = Rect2(157.85501, 0, 1282.145, 810)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0cso3"]
+a = Vector2(-604.1046, -371)
+b = Vector2(-608.9336, 280)
 
 [node name="map" type="CharacterBody2D" unique_id=505401130]
 collision_mask = 0
 script = ExtResource("1_paxxb")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1998187786]
-self_modulate = Color(0.34457007, 0.6261677, 1, 1)
-position = Vector2(0, 1)
-scale = Vector2(9.6171875, 1)
-texture = ExtResource("2_gldc4")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2041179053]
+position = Vector2(-25.5, 0)
+scale = Vector2(1.0354167, 1)
+texture = SubResource("AtlasTexture_gldc4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=125788091]
-position = Vector2(1.5, 2.75)
-shape = SubResource("RectangleShape2D_paxxb")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=622297039]
+position = Vector2(-0.011230469, 10)
+scale = Vector2(0.9978197, 1)
+polygon = PackedVector2Array(-646, -391, 546, -394, 551, -304, 275, -310, 271, -3, 180, -5, 175, -315, -653, -318)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=147154923]
-position = Vector2(3.999999, -322.00003)
-scale = Vector2(1.0390625, 4.2421875)
-texture = ExtResource("2_gldc4")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1343187585]
+position = Vector2(-25.5, 0)
+scale = Vector2(1.0354167, 1)
+shape = SubResource("SegmentShape2D_0cso3")
 
-[node name="Icon2" type="Sprite2D" parent="." unique_id=614736016]
-position = Vector2(3, -756.00006)
-scale = Vector2(10.5, 0.7734375)
-texture = ExtResource("2_gldc4")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=2060701518]
-position = Vector2(560.00006, -420.00003)
-scale = Vector2(1.3046875, 5.6640625)
-texture = ExtResource("2_gldc4")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1612010362]
-polygon = PackedVector2Array(-61, -597, -55, -60, 64, -62, 64, -599)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=919168637]
-polygon = PackedVector2Array(-668, -796, -668, -713, 476, -713, 479, -52, 632, -57, 671, -794)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1975405181]
+position = Vector2(-25.5, 0)
+scale = Vector2(1.0354167, 1)
+polygon = PackedVector2Array(-70.02013, -40, -65.19115, 269, -65.19115, 287, -637.9075, 268, -639.83905, 363, 573.19916, 360, 556.78064, -306, 470.82495, -302, 480.4829, 278, -7.2434616, 283, -1.4486923, -35)

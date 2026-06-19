@@ -1,30 +1,33 @@
 extends Control
 
 
+@export var next_level = ""
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	hide()
+	EventManager.beatLevel.connect(level_retrieve)
 	pass # Replace with function body.
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
+func level_retrieve(addy: String):
+	show()
+	EventManager.pauseGame.emit()
+	next_level = addy
+	pass
 
-func _on_resume_pressed() -> void:
-	EventManager.unpause_request.emit()
-	print("work on pause menu")
-
-
-func _on_settings_pressed() -> void:
-	EventManager.openSettings.emit()
-	print("sent")
-	hide()
+func _on_playagain_pressed() -> void:
+	EventManager.continueGame.emit()
+	get_tree().change_scene_to_file(next_level)
 	pass # Replace with function body.
 
 
-func _on_quit_pressed() -> void:
-	get_tree().paused = false
+func _on_level_selctor_pressed() -> void:
+	EventManager.continueGame.emit()
 	get_tree().change_scene_to_file("res://scenes/level_selection.tscn")
 	pass # Replace with function body.

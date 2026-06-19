@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" uid="uid://lpcbwugq6ltx" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dfu4bang8gsxo" path="res://scenes/map.tscn" id="2_sugp2"]
-[ext_resource type="PackedScene" uid="uid://cbe6isn1ju8eb" path="res://scenes/pause_menu.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://difrl43ithf5n" path="res://scenes/player.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dhi68jw402ui0" path="res://scenes/lava.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://dhsncqpjw3u4l" path="res://scenes/health_bar.tscn" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://blufdtu7q5cnt" path="res://scenes/settings.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://c14yuawk66fqa" path="res://scenes/objects/goal.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dhi68jw402ui0" path="res://scenes/objects/lava.tscn" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://b1u1lnv6ihpmi" path="res://assets/TitleScreen/BackGround.png" id="6_tefeu"]
 
 [node name="templevel" type="Node2D" unique_id=2079591282]
 process_mode = 3
@@ -16,30 +15,27 @@ script = ExtResource("1_o5qli")
 process_mode = 1
 position = Vector2(585, 448)
 scroll_impulse = 5000.0
-friction = 0.6
+friction = 15.0
 max_speed = 900
 
 [node name="lava" parent="map" unique_id=1549751215 instance=ExtResource("5_tbgi4")]
 position = Vector2(398, -60)
 
+[node name="Goal" parent="map" unique_id=1183661113 instance=ExtResource("4_tbgi4")]
+process_mode = 3
+position = Vector2(108, -129)
+nextLocation = "res://Level one/level1.tscn"
+level = "res://scenes/main.tscn"
+levelBeaten = 1
+
+[node name="BackGround" type="Sprite2D" parent="map" unique_id=833050147]
+z_index = -2
+position = Vector2(13.00005, -12.499992)
+scale = Vector2(3.4875002, 3.766667)
+texture = ExtResource("6_tefeu")
+
 [node name="Player" parent="." unique_id=1604881120 instance=ExtResource("4_jyhfs")]
 process_mode = 1
-position = Vector2(350, 363)
+position = Vector2(320, 695)
 platform_floor_layers = 0
 SPEED = 1200.0
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1960012165]
-position = Vector2(1, 8)
-
-[node name="Pause Menu" parent="Player/Camera2D" unique_id=1283381345 instance=ExtResource("3_jyhfs")]
-process_mode = 3
-visible = false
-
-[node name="Health Bar" parent="Player/Camera2D" unique_id=1402099306 instance=ExtResource("6_tefeu")]
-offset_left = -563.0
-offset_top = -309.0
-offset_right = -563.0
-offset_bottom = -309.0
-
-[node name="Settings" parent="Player/Camera2D" unique_id=843247705 instance=ExtResource("7_o6xl0")]
-process_mode = 3

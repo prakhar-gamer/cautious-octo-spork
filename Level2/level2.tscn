@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxxscsyoe6hrc"]
+
+[ext_resource type="Script" uid="uid://lpcbwugq6ltx" path="res://scripts/main.gd" id="1_k5up3"]
+[ext_resource type="PackedScene" uid="uid://dorap71g0m5l4" path="res://Level2/map2.tscn" id="2_f5l2u"]
+[ext_resource type="PackedScene" uid="uid://c14yuawk66fqa" path="res://scenes/objects/goal.tscn" id="3_gtgi0"]
+[ext_resource type="PackedScene" uid="uid://difrl43ithf5n" path="res://scenes/player.tscn" id="4_4ga8b"]
+
+[node name="Level1" type="Node2D" unique_id=2079591282]
+process_mode = 3
+script = ExtResource("1_k5up3")
+
+[node name="map" parent="." unique_id=505401130 instance=ExtResource("2_f5l2u")]
+position = Vector2(461, 634)
+scroll_impulse = 5000.0
+friction = 15.0
+max_speed = 900
+
+[node name="Goal" parent="map" unique_id=1183661113 instance=ExtResource("3_gtgi0")]
+position = Vector2(435, -123)
+nextLocation = "3"
+level = "2"
+levelBeaten = 2
+
+[node name="Player" parent="." unique_id=1604881120 instance=ExtResource("4_4ga8b")]
+position = Vector2(185, 542)

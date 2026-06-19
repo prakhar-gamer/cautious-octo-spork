@@ -1,44 +1,71 @@
 [gd_scene format=3 uid="uid://lxq2yd11eqnq"]
 
-[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://c55tn2eyq8uhw" path="res://scripts/title_screen.gd" id="1_sa3yf"]
+[ext_resource type="Texture2D" uid="uid://cu6mtpsefj3j8" path="res://assets/TitleScreen/playButton.png" id="2_mgrm8"]
+[ext_resource type="Texture2D" uid="uid://dcywvbc4fhx8n" path="res://assets/TitleScreen/byeButton-Sheet.png" id="3_dc4i4"]
+[ext_resource type="Texture2D" uid="uid://b1u1lnv6ihpmi" path="res://assets/TitleScreen/BackGround.png" id="4_e54dn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3yumr"]
+load_path = "res://.godot/imported/Scrolky(TITLE).png-f677d3fef14e6877463c92350d503293.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs5ya"]
+atlas = ExtResource("2_mgrm8")
+region = Rect2(6.7290916, 4.432179, 101.67221, 54.403553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mykxm"]
+atlas = ExtResource("2_mgrm8")
+region = Rect2(119.18912, 0, 113.563705, 57.42427)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tklts"]
+atlas = ExtResource("3_dc4i4")
+region = Rect2(195.88635, 111.0002, 105.1142, 61.430496)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u26n3"]
+atlas = ExtResource("3_dc4i4")
+region = Rect2(652.9995, 104.49974, 142.00012, 73.00006)
 
 [node name="TitleScreen" type="Node2D" unique_id=2013811701]
+position = Vector2(227, 40)
 script = ExtResource("1_sa3yf")
 
-[node name="Logo" type="Sprite2D" parent="." unique_id=1054392608]
-modulate = Color(5.839165, 1.9225332, 3.3134866, 1)
-position = Vector2(571, 109)
-texture = ExtResource("1_fgkus")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1253004224]
+texture = SubResource("CompressedTexture2D_3yumr")
 
 [node name="Control" type="Control" parent="." unique_id=929937182]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 93.0
-offset_top = 244.0
-offset_right = 1053.0
-offset_bottom = 603.0
+offset_left = -232.0
+offset_top = -38.0
+offset_right = 505.0
+offset_bottom = 278.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1207962326]
 layout_mode = 0
-offset_right = 1011.0
-offset_bottom = 365.0
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 10
+offset_left = 7.0
+offset_top = 86.0
+offset_right = 498.0
+offset_bottom = 301.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=725166612]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 13
 
 [node name="play" type="TextureButton" parent="Control/MarginContainer/VBoxContainer" unique_id=514001561]
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("1_fgkus")
+texture_normal = SubResource("AtlasTexture_cs5ya")
+texture_hover = SubResource("AtlasTexture_mykxm")
 
 [node name="quit" type="TextureButton" parent="Control/MarginContainer/VBoxContainer" unique_id=1497601614]
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("1_fgkus")
+texture_normal = SubResource("AtlasTexture_tklts")
+texture_hover = SubResource("AtlasTexture_u26n3")
+
+[node name="BackGround" type="Sprite2D" parent="." unique_id=247714919]
+z_index = -1
+position = Vector2(13, 93)
+texture = ExtResource("4_e54dn")
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

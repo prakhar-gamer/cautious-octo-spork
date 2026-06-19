@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://nq27o07ipufd"]
+
+[ext_resource type="Script" uid="uid://d2fg4sb14skin" path="res://scenes/won.gd" id="1_4pchp"]
+[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="1_ix7v3"]
+
+[node name="won" type="Control" unique_id=549619644]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -5.0
+offset_right = 1.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4pchp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=216784017]
+modulate = Color(0.2901961, 0.8980392, 0.48235294, 1)
+position = Vector2(237, 55)
+scale = Vector2(1.201172, 0.60351557)
+texture = ExtResource("1_ix7v3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1790156056]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 113.0
+offset_right = 460.0
+offset_bottom = 255.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=559185411]
+layout_mode = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="playagain" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=952981909]
+layout_mode = 2
+texture_normal = ExtResource("1_ix7v3")
+
+[node name="Level selctor" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=2139619945]
+layout_mode = 2
+texture_normal = ExtResource("1_ix7v3")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/playagain" to="." method="_on_playagain_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Level selctor" to="." method="_on_level_selctor_pressed"]

@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://clprcd85tb3pj" path="res://scripts/settings.gd" id="1_5p8wc"]
 
 [node name="Settings" type="Control" unique_id=843247705]
-visible = false
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.47300002
+anchor_bottom = 0.17400001
+offset_right = 23.959991
+offset_bottom = -1.9800034
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5p8wc")
@@ -26,7 +26,7 @@ text = "Scroll Sensitivity Impulse Thingy"
 
 [node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=333724355]
 layout_mode = 2
-max_value = 250.0
-step = 50.0
+max_value = 5000.0
+step = 500.0
 
 [connection signal="drag_ended" from="MarginContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_drag_ended"]

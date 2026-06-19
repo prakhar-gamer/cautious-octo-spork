@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cpb1rqseiuk0l"]
+
+[ext_resource type="Script" uid="uid://cc5ggau0uqs8t" path="res://scripts/death_screen.gd" id="1_dwo6e"]
+[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="1_uyutr"]
+
+[node name="Death Screen" type="Control" unique_id=257485486]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -480.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dwo6e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=881705644]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 152.0
+offset_right = 478.0
+offset_bottom = 280.0
+theme_override_constants/separation = 82
+alignment = 1
+
+[node name="restart" type="TextureButton" parent="HBoxContainer" unique_id=1490239522]
+layout_mode = 2
+texture_normal = ExtResource("1_uyutr")
+
+[node name="home" type="TextureButton" parent="HBoxContainer" unique_id=910153549]
+layout_mode = 2
+texture_normal = ExtResource("1_uyutr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=579855737]
+modulate = Color(0.7152194, 0.47860414, 1.92523e-07, 1)
+position = Vector2(238, 57.999996)
+scale = Vector2(1.9003904, 0.86523443)
+texture = ExtResource("1_uyutr")
+
+[connection signal="pressed" from="HBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="HBoxContainer/home" to="." method="_on_home_pressed"]

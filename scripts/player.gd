@@ -12,10 +12,12 @@ var dead = false
 
 func _ready() -> void:
 	add_to_group("player")
+	up_direction = Vector2.UP
+	platform_floor_layers = 0
 	
 func _process(delta: float) -> void:
-	if health == 0 && dead == false:
-		EventManager.dead.emit()
+	if health <= 0 && dead == false:
+		EventManager.dead.emit("res://scenes/main.tscn")
 		print("dead")
 		dead = true
 		
@@ -25,10 +27,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	if Input.is_action_just_pressed("ui_right"):
-		velocity.x += SPEED * delta
 	
 	#prevents the person from getting to fast
 	velocity.y = clampf(velocity.y, -1000, Max_fall_speed)

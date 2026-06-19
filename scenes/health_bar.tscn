@@ -5,13 +5,12 @@
 
 [node name="Health Bar" type="Control" unique_id=1402099306]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.46500003
+anchor_bottom = 0.15900001
 offset_left = 3.0
 offset_top = -2.0
-offset_right = 3.0
-offset_bottom = -2.0
+offset_right = -0.2000122
+offset_bottom = 0.06999588
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y3kqx")

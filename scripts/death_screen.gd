@@ -1,9 +1,11 @@
 extends Control
 
-
+var death_location = ""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hide()
 	
+	EventManager.dead.connect(deathScreen)
 	pass # Replace with function body.
 
 
@@ -12,19 +14,22 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_resume_pressed() -> void:
-	EventManager.unpause_request.emit()
-	print("work on pause menu")
+func deathScreen(deathloco: String):
+	show()
+	EventManager.pauseGame.emit()
+	death_location = deathloco
+	
 
 
-func _on_settings_pressed() -> void:
-	EventManager.openSettings.emit()
-	print("sent")
-	hide()
+func _on_restart_pressed() -> void:
+	EventManager.continueGame.emit()
+	get_tree().change_scene_to_file(death_location)
 	pass # Replace with function body.
 
 
-func _on_quit_pressed() -> void:
-	get_tree().paused = false
+
+
+func _on_home_pressed() -> void:
+	EventManager.continueGame.emit()
 	get_tree().change_scene_to_file("res://scenes/level_selection.tscn")
 	pass # Replace with function body.
