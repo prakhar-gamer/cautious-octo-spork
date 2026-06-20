@@ -1,42 +1,17 @@
 [gd_scene format=3 uid="uid://dorap71g0m5l4"]
 
 [ext_resource type="Script" uid="uid://82ubomvf5dm7" path="res://scripts/map.gd" id="1_pri5p"]
-[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="2_gujqs"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_paxxb"]
-size = Vector2(1203, 121.5)
+[ext_resource type="Texture2D" uid="uid://c84hvmeex5jud" path="res://Level2/LeveL2Map.png" id="2_ye817"]
 
 [node name="map" type="CharacterBody2D" unique_id=505401130]
 collision_mask = 0
 script = ExtResource("1_pri5p")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1998187786]
-self_modulate = Color(0.34457007, 0.6261677, 1, 1)
-position = Vector2(0, 1)
-scale = Vector2(9.6171875, 1)
-texture = ExtResource("2_gujqs")
+[node name="Map" type="Sprite2D" parent="." unique_id=577677967]
+texture = ExtResource("2_ye817")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=125788091]
-position = Vector2(1.5, 2.75)
-shape = SubResource("RectangleShape2D_paxxb")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1882127989]
+polygon = PackedVector2Array(-718, 213, -646, 46, -600, -74, -543, -130, -481, -161, -395, -155, -348, -106, -306, -40, -275, 6, -263, 43, -61, 25, 17, -91, 55, -137, 81, -164, 154, -174, 185, -163, 261, -131, 325, -93, 402, -39, 471, 22, 568, 88, 662, 153, 716, 177, 717, 149, 145, -292, -654, -192)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=147154923]
-position = Vector2(3.999999, -322.00003)
-scale = Vector2(1.0390625, 4.2421875)
-texture = ExtResource("2_gujqs")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=614736016]
-position = Vector2(3, -756.00006)
-scale = Vector2(10.5, 0.7734375)
-texture = ExtResource("2_gujqs")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=2060701518]
-position = Vector2(560.00006, -420.00003)
-scale = Vector2(1.3046875, 5.6640625)
-texture = ExtResource("2_gujqs")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1612010362]
-polygon = PackedVector2Array(-61, -597, -55, -60, 64, -62, 64, -599)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=919168637]
-polygon = PackedVector2Array(-668, -796, -668, -713, 476, -713, 479, -52, 632, -57, 671, -794)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1055222266]
+polygon = PackedVector2Array(-630, 404, -717, 207, -753, 268, -622, 549, 753, 469, 751, 135, 716, 138, 717, 344, 624, 313, 455, 227, 284, 130, 223, 85, 160, 87, 107, 146, -17, 238, -120, 274, -251, 281, -360, 232, -460, 146, -534, 151, -567, 208, -611, 360)

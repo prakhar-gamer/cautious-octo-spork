@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c25t66vbcbhwy" path="res://scripts/level_selection.gd" id="1_gswpo"]
 [ext_resource type="Texture2D" uid="uid://bj53awlx58mf" path="res://assets/Level Select/levelselecassets.png" id="2_3rh63"]
 [ext_resource type="Texture2D" uid="uid://b1u1lnv6ihpmi" path="res://assets/TitleScreen/BackGround.png" id="3_3rh63"]
-[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="4_tuscg"]
+[ext_resource type="Texture2D" uid="uid://c5apm7akkexr8" path="res://assets/Level Select/youwon!.png" id="4_tuscg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuscg"]
 atlas = ExtResource("2_3rh63")
@@ -16,14 +16,6 @@ region = Rect2(108.99939, 113.49977, 74.00006, 75.00003)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcujv"]
 atlas = ExtResource("2_3rh63")
 region = Rect2(205.99945, 116.49977, 73.00006, 70.00003)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efsdc"]
-atlas = ExtResource("2_3rh63")
-region = Rect2(300.9995, 114.49977, 66.00006, 68.00003)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0rqca"]
-atlas = ExtResource("2_3rh63")
-region = Rect2(387.99957, 116.49977, 64, 66.00003)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wv3l"]
 atlas = ExtResource("2_3rh63")
@@ -67,14 +59,6 @@ texture_normal = SubResource("AtlasTexture_42rqe")
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_rcujv")
 
-[node name="Level 4" type="TextureButton" parent="Control/VBoxContainer/1 - 5" unique_id=431718674]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_efsdc")
-
-[node name="LeveL 5" type="TextureButton" parent="Control/VBoxContainer/1 - 5" unique_id=1378752994]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_0rqca")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1584484810]
 z_index = 2
 position = Vector2(237, 49.999996)
@@ -85,13 +69,11 @@ z_index = -1
 position = Vector2(240, 135)
 texture = ExtResource("3_3rh63")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=143090667]
-position = Vector2(232, 182.99998)
-scale = Vector2(2.40625, 1.2109375)
+[node name="Won Spirte" type="Sprite2D" parent="." unique_id=143090667]
+position = Vector2(224.00009, 141)
+scale = Vector2(1.1927083, 1.2109375)
 texture = ExtResource("4_tuscg")
 
 [connection signal="pressed" from="Control/VBoxContainer/1 - 5/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/1 - 5/Level 2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/1 - 5/Level 3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/1 - 5/Level 4" to="." method="_on_level_4_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/1 - 5/LeveL 5" to="." method="_on_leve_l_5_pressed"]

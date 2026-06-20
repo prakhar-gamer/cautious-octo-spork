@@ -16,7 +16,7 @@ friction = 15.0
 max_speed = 900
 
 [node name="Goal" parent="map" unique_id=1183661113 instance=ExtResource("3_uxnn1")]
-position = Vector2(435, -646)
+position = Vector2(140, -130)
 nextLocation = "0"
 level = "5"
 levelBeaten = 5

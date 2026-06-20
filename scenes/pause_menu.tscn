@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://cbe6isn1ju8eb"]
 
 [ext_resource type="Script" uid="uid://cv0ambg7du4to" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+[ext_resource type="Texture2D" uid="uid://b5lu0s6poo18a" path="res://assets/TitleScreen/ASSETS.png" id="2_myx47"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kukqi"]
+atlas = ExtResource("2_myx47")
+region = Rect2(3.442688, 156.74886, 94.70099, 42.452164)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d2l8"]
+atlas = ExtResource("2_myx47")
+region = Rect2(104.246124, 5.0776787, 100.765594, 47.11724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l7mv"]
+atlas = ExtResource("2_myx47")
+region = Rect2(8.145615, 213.60645, 116.160324, 48.050232)
 
 [node name="Pause Menu" type="Control" unique_id=1283381345]
 process_mode = 4
@@ -20,18 +33,17 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=135443846]
 layout_mode = 2
 
-[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=860177580]
+[node name="Resume" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=541839460]
 layout_mode = 2
-text = "Resume"
+texture_normal = SubResource("AtlasTexture_kukqi")
 
-[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer" unique_id=579988387]
+[node name="Settings" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1497248183]
 layout_mode = 2
-text = "Settings"
+texture_normal = SubResource("AtlasTexture_5d2l8")
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1678888492]
+[node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1377401788]
 layout_mode = 2
-text = "Quit
-"
+texture_normal = SubResource("AtlasTexture_7l7mv")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

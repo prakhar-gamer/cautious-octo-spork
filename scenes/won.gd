@@ -23,7 +23,7 @@ func level_retrieve(addy: String):
 
 func _on_playagain_pressed() -> void:
 	EventManager.continueGame.emit()
-	get_tree().change_scene_to_file(next_level)
+	get_tree().reload_current_scene()
 	pass # Replace with function body.
 
 

@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dhsncqpjw3u4l"]
 
 [ext_resource type="Script" uid="uid://ja1xw2kuvef1" path="res://scripts/health_bar.gd" id="1_y3kqx"]
-[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="2_6opq1"]
+[ext_resource type="Texture2D" uid="uid://b5lu0s6poo18a" path="res://assets/TitleScreen/ASSETS.png" id="2_y3kqx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6opq1"]
+atlas = ExtResource("2_y3kqx")
+region = Rect2(14.153534, 5.0134335, 37.25528, 42.22264)
 
 [node name="Health Bar" type="Control" unique_id=1402099306]
 layout_mode = 3
@@ -23,29 +27,29 @@ offset_bottom = 40.0
 [node name="heart1" type="TextureRect" parent="HBoxContainer" unique_id=981041830]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("2_6opq1")
+texture = SubResource("AtlasTexture_6opq1")
 expand_mode = 2
 
 [node name="heart2" type="TextureRect" parent="HBoxContainer" unique_id=1416380725]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("2_6opq1")
+texture = SubResource("AtlasTexture_6opq1")
 expand_mode = 2
 
 [node name="heart3" type="TextureRect" parent="HBoxContainer" unique_id=2085051765]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("2_6opq1")
+texture = SubResource("AtlasTexture_6opq1")
 expand_mode = 2
 
 [node name="heart4" type="TextureRect" parent="HBoxContainer" unique_id=1614569742]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("2_6opq1")
+texture = SubResource("AtlasTexture_6opq1")
 expand_mode = 2
 
 [node name="heart5" type="TextureRect" parent="HBoxContainer" unique_id=328398785]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("2_6opq1")
+texture = SubResource("AtlasTexture_6opq1")
 expand_mode = 2

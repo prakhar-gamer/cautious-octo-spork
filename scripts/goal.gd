@@ -21,9 +21,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		elif levelBeaten==2:
 			EventManager.level3 = true
 		elif levelBeaten ==3:
-			EventManager.level4 = true
-		elif levelBeaten == 4:
-			EventManager.level5 = true
+			EventManager.gameBeaten = true
 			
 		EventManager.beatLevel.emit(nextLocation)
 		pass

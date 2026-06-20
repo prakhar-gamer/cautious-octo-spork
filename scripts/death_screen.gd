@@ -23,7 +23,7 @@ func deathScreen(deathloco: String):
 
 func _on_restart_pressed() -> void:
 	EventManager.continueGame.emit()
-	get_tree().change_scene_to_file(death_location)
+	get_tree().reload_current_scene()
 	pass # Replace with function body.
 
 

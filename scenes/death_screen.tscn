@@ -1,7 +1,19 @@
 [gd_scene format=3 uid="uid://cpb1rqseiuk0l"]
 
 [ext_resource type="Script" uid="uid://cc5ggau0uqs8t" path="res://scripts/death_screen.gd" id="1_dwo6e"]
-[ext_resource type="Texture2D" uid="uid://jfdjg2wyiep3" path="res://icon.svg" id="1_uyutr"]
+[ext_resource type="Texture2D" uid="uid://b5lu0s6poo18a" path="res://assets/TitleScreen/ASSETS.png" id="2_dwo6e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqh5l"]
+atlas = ExtResource("2_dwo6e")
+region = Rect2(96, 121.5, 133, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ns25"]
+atlas = ExtResource("2_dwo6e")
+region = Rect2(99, 54.5, 126, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwety"]
+atlas = ExtResource("2_dwo6e")
+region = Rect2(251, 141.5, 220, 128)
 
 [node name="Death Screen" type="Control" unique_id=257485486]
 process_mode = 3
@@ -18,25 +30,24 @@ script = ExtResource("1_dwo6e")
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=881705644]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 152.0
+offset_top = 178.0
 offset_right = 478.0
-offset_bottom = 280.0
+offset_bottom = 265.0
 theme_override_constants/separation = 82
 alignment = 1
 
 [node name="restart" type="TextureButton" parent="HBoxContainer" unique_id=1490239522]
 layout_mode = 2
-texture_normal = ExtResource("1_uyutr")
+texture_normal = SubResource("AtlasTexture_mqh5l")
 
 [node name="home" type="TextureButton" parent="HBoxContainer" unique_id=910153549]
 layout_mode = 2
-texture_normal = ExtResource("1_uyutr")
+texture_normal = SubResource("AtlasTexture_7ns25")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=579855737]
-modulate = Color(0.7152194, 0.47860414, 1.92523e-07, 1)
-position = Vector2(238, 57.999996)
-scale = Vector2(1.9003904, 0.86523443)
-texture = ExtResource("1_uyutr")
+position = Vector2(237, 86)
+scale = Vector2(1.3047407, 1.2451173)
+texture = SubResource("AtlasTexture_gwety")
 
 [connection signal="pressed" from="HBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HBoxContainer/home" to="." method="_on_home_pressed"]

@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-@onready var sprite = $Sprite2D
 var x_direction = true
 
 @export var scroll_impulse: float = 100
