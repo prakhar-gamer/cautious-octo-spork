@@ -11,5 +11,8 @@ This only runs on windows
 2) extract the exe
 3) run the exe
 
+# Ai Usage
+All the art in this game was done by me in Aesprite! The code was written mostly by me, BUT I did use ai for debugging and for parts I couldnt figure out, it went like, Do it myself, find anything online for my issue, then ask ai. I really focused in trying to make my code my own code rather then ai, and you could probably see it by my code quality ._. 
+
 # Reflection
 This entire project was designed to get me to start actually practicing shipping, and getting back into coding with minimal use of AI. I also wanted to tap in with making pixel art, and I think my art turned out pretty good. Level 3's background was really fun too make. I hope I can make something better then this. The movement is not like how I like it, and I dislike the map collisions. The game is also really easy and lacks any challenege. If I were to take this project up, I would focus on implementing better map designs and more mechanics.
